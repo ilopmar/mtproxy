@@ -84,6 +84,9 @@ After creating the Docker image and pushing it to a registry, set up your ARM in
 ```shell
 $ sudo apt-get update
 $ sudo apt-get install qemu qemu-user-static binfmt-support
+
+# If the previous don't work, try with
+$ sudo apt-get install qemu-system qemu-utils qemu-user qemu-user-static binfmt-support
 ```
 
 To configure multi-architecture container support, run:
