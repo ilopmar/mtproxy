@@ -1,6 +1,6 @@
 # MTProxy
 
-This repository contains the source for a Docker image for Telegram MTProxy, based on Ubuntu 24.04. The official [Telegram MTProxy repository](https://github.com/TelegramMessenger/MTProxy) hasn't been updated or maintained in over five years.
+This repository contains the source for a Docker image for Telegram MTProxy, based on Photon OS 5.0. The official [Telegram MTProxy repository](https://github.com/TelegramMessenger/MTProxy) hasn't been updated or maintained in over five years.
 The `Dockerfile` is inspired by this [guide](https://gist.github.com/rameerez/8debfc790e965009ca2949c3b4580b91).
 
 ## Running MTProxy
@@ -42,8 +42,6 @@ The container listens on port `8443` for client connections and on port `8888` f
 To run `MTProxy` with Docker Compose:
 
 ```yaml
-version: '3.9'
-
 services:
   mtproxy:
     container_name: mtproxy

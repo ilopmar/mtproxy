@@ -7,7 +7,7 @@ if [ -z "${SECRET_KEY}" ]; then
 fi
 
 # Fetch the private IP address of the container
-CONTAINER_PRIVATE_IP=$(hostname -I | awk '{print $1}')
+CONTAINER_PRIVATE_IP=$(ip -4 addr show | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1 | grep -v '127.0.0.1' | head -n 1)
 CALCULATED_PUBLIC_IP=$(curl -s ifconfig.me)
 
 # Use environment variables if set, otherwise use the fetched IP
